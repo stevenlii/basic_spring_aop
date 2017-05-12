@@ -1,4 +1,4 @@
-package me.laiyijie.demo.aop;
+package com.paymoon.basic.spring.aop.demo.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Aspect
 public class TimeMonitor {
 
-    @Around("execution(* me.laiyijie.demo.service.UserServiceImpl.sayHello(..))")
+    @Around("execution(* com.paymoon.basic.spring.aop.demo.service.UserServiceImpl.sayHello(..))")
     public void monitorAround(ProceedingJoinPoint pjp) throws Throwable {
 
         System.out.println("method start time:" + System.currentTimeMillis());

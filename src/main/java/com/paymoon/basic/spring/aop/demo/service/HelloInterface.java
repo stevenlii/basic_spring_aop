@@ -1,4 +1,4 @@
-package me.laiyijie.demo;
+package com.paymoon.basic.spring.aop.demo.service;
 
 public interface HelloInterface{
 
