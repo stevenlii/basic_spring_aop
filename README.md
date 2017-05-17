@@ -84,4 +84,17 @@ AspectTeacher,afterHello,type:teacher
         userService =  context.getBean("helloStudent",IHello.class);
         userService.sayHello("student");
         context.close();
+        
+ 日志
+       ````
+       	17-05-2017 11:38:16,962 CST INFO  [main]     com.paymoon.basic.spring.aop.demo.aspect.AspectHandler@44] aroundHelloAspectHandler..start!!!!!!!!
+    	beforeHelloAspectHandler..start!!!!!!!!
+		already find aspect!	com.paymoon.basic.spring.aop.demo.aspect.impl.AspectTeacher@6c451c9c
+		AspectTeacher,beforeHello,type:teacher
+		I'm teacher, I can say hello to students, here is helloParam: >teacher
+		AspectTeacher,afterHello,type:teacher
+		17-05-2017 11:38:17,381 CST INFO  [main] [com.paymoon.basic.spring.aop.demo.aspect.AspectHandler@44] aroundHelloAspectHandler..start!!!!!!!!
+		beforeHelloAspectHandler..start!!!!!!!!
+		hello,I'm students,  here is helloParam: >student
+		````
         可知在student的时候，是没有用到切面的
