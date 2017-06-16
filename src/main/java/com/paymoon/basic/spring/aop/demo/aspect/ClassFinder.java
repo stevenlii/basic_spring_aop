@@ -202,7 +202,7 @@ public class ClassFinder {
 	public static List<Class> getAllClassByInterfaceViaSpring(Class clazz) {
 		 List<Class>  list = new ArrayList<Class>();
 		 String packagename = clazz.getPackage().getName();
-		 
+		 //子类最好在packagename.impl下
 		ClassPathScanningCandidateComponentProvider provider = new ClassPathScanningCandidateComponentProvider(true);
 		provider.addIncludeFilter(new AssignableTypeFilter(clazz));
 
@@ -213,6 +213,7 @@ public class ClassFinder {
 		{
 			 try {
 				Class c = Class.forName(component.getBeanClassName());
+				//isAssignableFrom是用native写的，判断当前类是否有继承关系
 				if (clazz.isAssignableFrom(c)&&!c.equals(clazz)){
 					list.add(c);
 				 }

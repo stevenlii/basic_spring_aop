@@ -93,8 +93,16 @@ AspectTeacher,afterHello,type:teacher
 		AspectTeacher,beforeHello,type:teacher
 		I'm teacher, I can say hello to students, here is helloParam: >teacher
 		AspectTeacher,afterHello,type:teacher
-		17-05-2017 11:38:17,381 CST INFO  [main] [com.paymoon.basic.spring.aop.demo.aspect.AspectHandler@44] aroundHelloAspectHandler..start!!!!!!!!
+		17-05-2017 11:38:17,381 CST INFO  [main] com.paymoon.basic.spring.aop.demo.aspect.AspectHandler@44] aroundHelloAspectHandler..start!!!!!!!!
 		beforeHelloAspectHandler..start!!!!!!!!
 		hello,I'm students,  here is helloParam: >student
 		````
         可知在student的时候，是没有用到切面的
+        
+ 参考 
+ Spring中的AOP（五）——在Advice方法中获取目标方法的参数 - 摆渡者
+https://my.oschina.net/itblog/blog/211693
+Spring AOP切面实现：参数传递 - LittleSkey的博客 - 博客频道 - CSDN.NET
+http://blog.csdn.net/LittleSkey/article/details/51842917
+Spring 中使用 AOP 切面解析处理自定义注解 - 后端 - 掘金
+https://juejin.im/entry/5849175db123db0066048508
